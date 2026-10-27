@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="kk"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>№9 зертханалық жұмыс · 9-нұсқа</title>
+<style>
+:root{--bg:#7b3fe4;--bgt:#fff;--fg:#2d1b4e;--cd:#fff;--ac:#7b3fe4;--mu:#6b5b8c;--bd:#ebe3fb;--ok:#0f8a52;--er:#d93a4c;--wn:#b36b00;--oa:#fff;--sh:0 6px 0 rgba(45,27,78,.18);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d0f3a;--bgt:#f1eaff;--fg:#f1eaff;--cd:#2b1856;--ac:#a78bfa;--mu:#bba9e3;--bd:#3d2680;--ok:#4ade9a;--er:#ff7a8a;--wn:#fbbf24;--oa:#1d0f3a;--sh:0 6px 0 rgba(0,0,0,.35)}}
+:root[data-theme="dark"]{--bg:#1d0f3a;--bgt:#f1eaff;--fg:#f1eaff;--cd:#2b1856;--ac:#a78bfa;--mu:#bba9e3;--bd:#3d2680;--ok:#4ade9a;--er:#ff7a8a;--wn:#fbbf24;--oa:#1d0f3a;--sh:0 6px 0 rgba(0,0,0,.35)}
+body.hc{--bg:#000;--bgt:#fff;--fg:#fff;--cd:#000;--ac:#ff0;--mu:#fff;--bd:#fff;--ok:#0f0;--er:#f66;--wn:#ff0;--oa:#000;--sh:none}
+body.lg{font-size:20px}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 "Nunito","Trebuchet MS",system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:600;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle at 12% 18%,rgba(255,255,255,.12) 0 90px,transparent 91px),radial-gradient(circle at 90% 12%,rgba(255,212,59,.18) 0 60px,transparent 61px),radial-gradient(circle at 80% 85%,rgba(255,255,255,.1) 0 130px,transparent 131px),radial-gradient(circle at 8% 90%,rgba(34,181,115,.16) 0 70px,transparent 71px)}
+body.hc::before{display:none}
+h1,h2,h3{font-weight:800;letter-spacing:-.01em}h2{font-size:1.6em;margin:.1em 0 .6em}
+button,select,input{font:inherit;font-weight:700;color:var(--fg)}
+button{-webkit-tap-highlight-color:transparent;transition:transform .08s,filter .15s,background .15s,border-color .15s}
+.app{display:grid;grid-template-columns:300px minmax(0,1fr);min-height:100vh}
+#sb{position:sticky;top:16px;align-self:start;height:calc(100vh - 32px);margin:16px 0 16px 16px;overflow:auto;box-sizing:border-box;padding:22px 16px;background:var(--cd);border-radius:32px;box-shadow:var(--sh)}
+#sb h1{font-size:1.1em;color:var(--fg);margin:0 6px 16px}#sb h1 small{display:block;font-weight:600;color:var(--mu);font-size:.78em;margin-top:2px}
+.lv,.tabs{display:flex;gap:6px;flex-wrap:wrap;padding:6px;background:var(--bd);border-radius:24px}
+.tabs{margin:8px 0 14px;width:fit-content;max-width:100%}
+body.hc .lv,body.hc .tabs{background:#000;border:2px solid #fff}
+#sb .lv{flex-direction:column}#sb .lv button{text-align:left}
+.lv button,.tabs button{flex:1;border:0;background:transparent;color:var(--mu);border-radius:18px;padding:9px 14px;font-size:.9em;cursor:pointer}
+.lv button:hover,.tabs button:hover{color:var(--fg)}
+.lv button.on,.tabs button.on{background:var(--ac);color:var(--oa);box-shadow:0 3px 0 rgba(0,0,0,.2)}
+.cap{margin:20px 8px 6px;font-size:.72em;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mu)}
+.mi{display:flex;gap:10px;align-items:center;width:100%;text-align:left;border:0;background:transparent;border-radius:18px;padding:8px 10px;color:var(--mu);cursor:pointer;font-size:.92em;margin:2px 0}
+.mi b{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:.76em;background:var(--bd);color:var(--mu)}
+.mi:hover{background:var(--bd);color:var(--fg)}
+.mi.on{background:var(--ac);color:var(--oa)}.mi.on b{background:color-mix(in srgb,var(--oa) 22%,transparent);color:var(--oa)}
+.mi.dn b{background:color-mix(in srgb,var(--ok) 22%,transparent);color:var(--ok)}.mi.sub{margin-left:20px;font-size:.85em}
+body.hc .mi.on{background:#ff0;color:#000}
+main{padding:22px 24px;max-width:880px;width:100%;box-sizing:border-box}
+.top{display:flex;align-items:center;gap:10px;margin-bottom:12px;color:var(--bgt);font-weight:800}#ttl{flex:1}
+.ic{display:none;border:0;background:var(--cd);color:var(--ac);border-radius:50%;width:42px;height:42px;cursor:pointer;font-size:1.2em;box-shadow:0 4px 0 rgba(0,0,0,.2)}
+.bar{height:14px;background:rgba(255,255,255,.28);border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;background:#ffd43b;border-radius:99px;transition:width .35s}
+body.hc .bar{border:2px solid #fff;background:#000}
+#sl{background:var(--cd);border-radius:32px;padding:26px;margin:16px 0;min-height:290px;box-shadow:var(--sh)}
+.b{border:0;background:var(--ac);color:var(--oa);border-radius:99px;padding:12px 24px;font-weight:800;cursor:pointer;box-shadow:0 5px 0 rgba(0,0,0,.25)}
+.b:hover{filter:brightness(1.08)}.b:active{transform:translateY(4px);box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.b:disabled{opacity:.4;cursor:default;box-shadow:0 5px 0 rgba(0,0,0,.15);transform:none;filter:none}
+#pv{background:var(--cd);color:var(--ac)}#nx{background:#ffd43b;color:#3b2a00}
+body.hc #pv,body.hc #nx{background:#ff0;color:#000}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:4px solid #ffd43b;outline-offset:2px}
+.ct{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.cd{margin:10px 0}
+.rb{width:100%;text-align:left;border:3px solid var(--bd);background:transparent;border-radius:22px;padding:13px 18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.rb::after{content:"+";display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--bd);color:var(--ac);font-weight:800}.rb[aria-expanded=true]::after{content:"−"}
+.rb:hover{border-color:var(--ac)}.rb[aria-expanded=true]{border-color:var(--ac);background:color-mix(in srgb,var(--ac) 10%,transparent)}
+.cd p{margin:8px 0 0;padding:6px 18px;color:var(--mu)}
+.mu{color:var(--mu)}
+svg{max-width:100%;height:auto}svg line,svg path,svg circle.r{stroke:var(--mu);stroke-width:2.5;fill:none;stroke-linecap:round}svg .nd{fill:var(--ac);stroke:none}svg text{fill:var(--mu);font-size:12px;font-weight:700}svg rect.bx{fill:var(--cd);stroke:var(--ac);stroke-width:2.5}
+.op{display:flex;align-items:center;gap:12px;width:100%;text-align:left;margin:10px 0;border:0;border-radius:22px;padding:14px 18px;cursor:pointer;color:#fff;font-weight:800;box-shadow:0 5px 0 rgba(0,0,0,.25)}
+.op::before{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.28);font-size:.85em}
+.op:nth-of-type(1){background:#d93a4c}.op:nth-of-type(2){background:#2f6fe0}.op:nth-of-type(3){background:#f59e0b;color:#2b1d00}.op:nth-of-type(4){background:#0f8a52}
+.op:nth-of-type(1)::before{content:"A"}.op:nth-of-type(2)::before{content:"B"}.op:nth-of-type(3)::before{content:"C"}.op:nth-of-type(4)::before{content:"D"}
+.op:hover:not(:disabled){filter:brightness(1.1)}.op:active:not(:disabled){transform:translateY(4px);box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.op:disabled{cursor:default}.op.x{opacity:.35}.op.ok::after{content:"✓";margin-left:auto;font-size:1.4em}.op.er::after{content:"✕";margin-left:auto;font-size:1.3em}.op.er{opacity:.65}
+.op.ok{outline:5px solid #ffd43b;outline-offset:1px}
+body.hc .op{border:3px solid #fff}
+#qb{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}#qb>*:not(.op){grid-column:1/-1}
+#qb h3{font-size:1.35em;text-align:center;margin:10px 0 16px;padding:20px;background:color-mix(in srgb,var(--ac) 12%,transparent);border-radius:26px}
+@media(max-width:560px){#qb{grid-template-columns:1fr}}
+.fb{margin:12px 0;padding:14px 18px;border-radius:22px;background:color-mix(in srgb,var(--ac) 10%,transparent);border:3px solid color-mix(in srgb,var(--ac) 28%,transparent)}
+.pill{display:inline-block;padding:3px 14px;border-radius:99px;font-weight:800;font-size:.9em;background:color-mix(in srgb,currentColor 16%,transparent)}.pill.ok{color:var(--ok)}.pill.mid,.pill.warn{color:var(--wn)}.pill.bad{color:var(--er)}
+.g{height:16px;background:var(--bd);border-radius:99px;overflow:hidden}.g i{display:block;height:100%;width:0;background:linear-gradient(90deg,#22b573,#ffd43b,#ef4f5f);border-radius:99px;transition:width .2s}
+input[type=range]{accent-color:var(--ac)}input[type=checkbox]{accent-color:var(--ac)}
+table{border-collapse:collapse;width:100%}td,th{border-bottom:2px solid var(--bd);padding:9px 8px;text-align:left}th{color:var(--mu);font-size:.85em}
+input[type=number],.mt{padding:9px 14px;background:var(--cd);border:3px solid var(--bd);border-radius:16px;width:100%;box-sizing:border-box}.mt{width:auto}.mt.ok{border-color:var(--ok)}.mt.bad{border-color:var(--er)}
+.dash{stroke-dasharray:6 6;animation:fl 1s linear infinite}@keyframes fl{to{stroke-dashoffset:-12}}
+#ov{display:none}
+@media(max-width:860px){.app{display:block}main{padding:14px}.ic{display:block}
+#sb{position:fixed;z-index:20;left:0;top:0;width:300px;max-width:85vw;height:100%;margin:0;border-radius:0 32px 32px 0;transform:translateX(-105%);transition:transform .25s}
+body.mo #sb{transform:none}body.mo #ov{display:block;position:fixed;inset:0;z-index:15;background:rgba(0,0,0,.45)}}
+@media(prefers-reduced-motion:reduce){.dash{animation:none}button,#sb{transition:none}}
+</style></head><body>
+<div class="app">
+<aside id="sb" aria-label="Курс мәзірі">
+<h1>№9 зертханалық жұмыс · 9-нұсқа<small>Интерактивті дизайн және мультимедиа</small></h1>
+<div class="lv" id="lv" role="tablist" aria-label="Деңгей"></div>
+<p class="cap">Бөлімдер</p>
+<nav id="mn" aria-label="Бөлімдер"></nav>
+</aside>
+<div id="ov" onclick="tg(0)"></div>
+<main>
+<header class="top"><button class="ic" id="mb" onclick="tg()" aria-label="Мәзір">☰</button><span id="ttl"></span><span id="pc"></span></header>
+<div class="bar"><i id="pg"></i></div>
+<section id="sl" aria-live="polite"></section>
+<footer class="ct"><button class="b" id="pv" onclick="back()">◀ Артқа</button><button class="b" id="nx" onclick="nx()">Келесі ▶</button></footer>
+</main>
+</div>
+<script>
+const $=s=>document.querySelector(s);
+const R=(t,p)=>`<div class=cd><button class=rb aria-expanded=false onclick=rv(this)>${t}</button><p hidden>${p}</p></div>`;
+function rv(b){const n=b.nextElementSibling;n.hidden=!n.hidden;b.setAttribute('aria-expanded',!n.hidden)}
+function tabs(a){return `<div class=tabs role=tablist>${a.map((x,i)=>`<button role=tab class="${i?'':'on'}" onclick="tb(this,${i})">${x[0]}</button>`).join('')}</div>`+a.map((x,i)=>`<div class=tp ${i?'hidden':''}>${x[1]}</div>`).join('')}
+function tb(b,i){const p=b.parentElement;[...p.children].forEach((c,j)=>c.classList.toggle('on',j==i));let e=p.nextElementSibling,j=0;while(e&&e.classList.contains('tp')){e.hidden=j++!=i;e=e.nextElementSibling}}
+function stp(b){const l=b.previousElementSibling,h=[...l.children].find(x=>x.hidden);if(h)h.hidden=false;if(![...l.children].some(x=>x.hidden))b.disabled=true}
+function topo(t){const n=5;let p=[],l='';
+if(t=='star'){p=[...Array(n)].map((_,i)=>{const a=i*2*Math.PI/n-1.57;return[150+95*Math.cos(a),70+55*Math.sin(a)]});l=p.map(q=>`<line x1=150 y1=70 x2=${q[0]} y2=${q[1]}></line>`).join('')+'<rect class=bx x=134 y=56 width=32 height=28 rx=5></rect><text x=150 y=74 text-anchor=middle>Хаб</text>'}
+if(t=='bus'){p=[...Array(n)].map((_,i)=>[40+i*55,i%2?105:35]);l='<line x1=15 y1=70 x2=285 y2=70></line>'+p.map(q=>`<line x1=${q[0]} y1=70 x2=${q[0]} y2=${q[1]}></line>`).join('')}
+if(t=='ring'){p=[...Array(6)].map((_,i)=>{const a=i*Math.PI/3;return[150+80*Math.cos(a),70+55*Math.sin(a)]});l='<ellipse cx=150 cy=70 rx=80 ry=55 class=r fill=none stroke=currentColor stroke-width=2></ellipse>'}
+return `<svg viewBox="0 0 300 140" role=img aria-label="${t} топологиясы">${l}${p.map(q=>`<circle class=nd cx=${q[0]} cy=${q[1]} r=9></circle>`).join('')}</svg>`}
+const AC0={};
+const C={
+easy:{n:'Жеңіл · Компьютерлік желілер',s:[
+{id:'t',t:'Компьютерлік желілер',h:`<p>Визуалды презентация · жеңіл деңгей · 9-нұсқа</p><svg viewBox="0 0 300 100" role=img aria-label="Желі сызбасы">${[40,150,260].map(x=>`<line x1=${x} y1=70 x2=150 y2=30></line><circle class=nd cx=${x} cy=70 r=10></circle>`).join('')}<circle class=nd cx=150 cy=30 r=14></circle></svg><button class=b onclick=nx()>Бастау ▶</button>`},
+{id:'g',t:'Мақсат және нәтиже',h:`<p>Мақсат: желі түрлерін, топологияларын және жабдықтарын ажырата білу.</p><ul><li>LAN, MAN, WAN айырмасын түсіндіру;</li><li>үш топологияны салыстыру;</li><li>қауіпсіз желі ережелерін қолдану.</li></ul>`},
+{id:'ty',t:'Желі түрлері',h:`<svg viewBox="0 0 300 130" role=img aria-label="LAN MAN WAN шеңберлері"><circle class=r cx=150 cy=70 r=55></circle><circle class=r cx=150 cy=85 r=38></circle><circle class=r cx=150 cy=100 r=20></circle><text x=150 y=22 text-anchor=middle>WAN</text><text x=150 y=58 text-anchor=middle>MAN</text><text x=150 y=104 text-anchor=middle>LAN</text></svg>${R('LAN — жергілікті желі','Бір бөлме, үй немесе ғимарат ішіндегі желі.')}${R('MAN — қалалық желі','Қала ішіндегі ғимараттарды біріктіреді.')}${R('WAN — аймақтық желі','Елдер мен құрлықтарды байланыстырады; Интернет — ең үлкен WAN.')}`},
+{id:'tp',t:'Желі топологиялары',h:tabs([['Жұлдыз',topo('star')+'<p>Барлық құрылғы орталық түйінге қосылады. Артықшылығы: бір түйін ақауы желіні тоқтатпайды.</p>'],['Шина',topo('bus')+'<p>Құрылғылар ортақ кабельге қосылады. Қарапайым, бірақ кабель ақауы желіні тоқтатады.</p>'],['Сақина',topo('ring')+'<p>Әр құрылғы екі көршісімен жалғанады, деректер шеңбер бойымен жүреді.</p>']])},
+{id:'dv',t:'Желі жабдықтары',h:R('Маршрутизатор','Әртүрлі желілерді жалғап, пакеттерді бағыттайды.')+R('Коммутатор','Жергілікті желі ішінде құрылғыларды қосады.')+R('Wi-Fi нүктесі','Кабельсіз қосылуды қамтамасыз етеді.')+R('Желілік карта және кабель','Құрылғыны желіге физикалық қосады.')},
+{id:'st',t:'Сайтқа кіру жолы',h:`<p>Батырманы басып қадамдарды ашыңыз:</p><ol class=st><li>Браузерге мекенжай енгізіледі.</li><li hidden>DNS домен атын IP-мекенжайға түрлендіреді.</li><li hidden>Маршрутизатор сұрауды Интернетке жібереді.</li><li hidden>Сервер жауап беріп, бет жүктеледі.</li></ol><button class=b onclick=stp(this)>Келесі қадам</button>`},
+{id:'sf',t:'Қауіпсіз желі',h:`<ul><li>Күрделі әрі әртүрлі парольдер.</li><li>Жүйе мен роутерді жаңартып отыру.</li><li>Ашық Wi-Fi-да құпия деректерді енгізбеу.</li><li>Антивирус пен брандмауэр қолдану.</li></ul>`},
+{id:'sm',t:'Қорытынды',h:`<p>Желі түрлері көлемі бойынша, топологиялар қосылу тәсілі бойынша, жабдықтар атқаратын қызметі бойынша ажыратылады. Енді білімді тексеріңіз.</p><button class=b onclick=nx()>Тестке өту ▶</button>`},
+{id:'quiz',t:'Білімді тексеру'}],
+q:[{q:'Бір ғимарат ішіндегі желі қалай аталады?',o:['LAN','WAN','MAN','SMTP'],a:0,e:'LAN — жергілікті желі.'},
+{q:'Барлық құрылғы орталық түйінге қосылатын топология?',o:['Шина','Жұлдыз','Сақина','Кездейсоқ'],a:1,e:'Жұлдыз топологиясында орталықта хаб немесе коммутатор болады.'},
+{q:'Желілерді жалғап, пакеттерді бағыттайтын құрылғы?',o:['Маршрутизатор','Сканер','Веб-камера','Дыбыс картасы'],a:0,e:'Бұл маршрутизатордың қызметі.'},
+{q:'DNS не істейді?',o:['Домен атын IP-мекенжайға түрлендіреді','Вирустарды жояды','Файлды сығады','Бейнені өңдейді'],a:0,e:'DNS — домендік атаулар жүйесі.'},
+{q:'Қауіпсіз желіге қатысты дұрыс әрекет?',o:['Парольді бәріне беру','Күрделі пароль және жаңартулар','Жаңартуды өшіру','Ашық Wi-Fi-да банк деректерін енгізу'],a:1,e:'Күрделі пароль мен жаңартулар қорғанысты арттырады.'}]},
+mid:{n:'Орташа · Цифрлық маркетинг құралдары',s:[
+{id:'t',t:'Цифрлық маркетинг құралдары',h:`<p>Интерактивті презентация · орташа деңгей · 9-нұсқа</p><button class=b onclick=nx()>Бастау ▶</button>`},
+{id:'g',t:'Мақсат және мәзір',h:`<p>Мақсат: негізгі арналарды, көрсеткіштерді таңдап, тиімділікті есептей білу.</p><p class=mu>Бөлімге өту:</p><button class=b onclick="go('fn')">Воронка</button> <button class=b onclick="go('ch')">Арналар</button> <button class=b onclick="go('ca')">Калькулятор</button> <button class=b onclick="go('mt')">Тапсырма</button>`},
+{id:'fn',t:'Маркетинг воронкасы',h:`<p>Кезеңді басыңыз:</p>`+[['1. Хабардарлық','Клиент бренд туралы алғаш біледі.',100],['2. Қызығушылық','Клиент ұсынысты салыстырады.',80],['3. Шешім','Клиент таңдау жасауға дайындалады.',60],['4. Әрекет','Сатып алу немесе өтінім қалдыру.',40]].map(x=>`<div style="width:${x[2]}%;margin:auto">${R(x[0],x[1])}</div>`).join('')},
+{id:'ch',t:'Негізгі арналар',h:tabs([['SEO','Сайтты іздеу жүйесінде жоғары шығару. Нәтижесі баяу, бірақ ұзақ мерзімді.'],['SMM','Әлеуметтік желілерде қауымдастық құру және жарнама.'],['Email','Бар базаға жеке хабарлама жіберу: арзан және өлшенетін.'],['Контекст','Іздеу сұранысына жарнама көрсету: нәтиже жылдам.'],['Контент','Пайдалы мақала, бейне, инфографика арқылы аудиторияны тарту.']])},
+{id:'kp',t:'Негізгі көрсеткіштер',h:R('CTR','Басу саны / көрсетілім саны × 100%.')+R('CR (конверсия)','Мақсатты әрекет жасағандар / келушілер × 100%.')+R('CPA','Бір әрекетке кеткен шығын = бюджет / әрекет саны.')+R('ROI','(Кіріс − шығын) / шығын × 100%.')},
+{id:'ca',t:'Тиімділік калькуляторы',init:'calc',h:`<p>Мәндерді өзгертіңіз:</p><table><tr><td>Бюджет, ₸</td><td><input type=number id=cb value=100000 oninput=calc()></td></tr><tr><td>Көрсетілім</td><td><input type=number id=cs value=50000 oninput=calc()></td></tr><tr><td>Басу</td><td><input type=number id=ck value=1500 oninput=calc()></td></tr><tr><td>Тапсырыс</td><td><input type=number id=co value=60 oninput=calc()></td></tr><tr><td>Орташа чек, ₸</td><td><input type=number id=cp value=4000 oninput=calc()></td></tr></table><div class=fb id=cr role=status></div><svg viewBox="0 0 300 50" role=img aria-label="Шығын мен кіріс диаграммасы"><rect id=b1 x=10 y=5 height=16 fill="#ef4f5f"></rect><rect id=b2 x=10 y=28 height=16 fill="#22b573"></rect></svg><p class=mu>Қызыл — шығын, жасыл — кіріс.</p>`},
+{id:'tl',t:'Аналитика құралдары',h:R('Google Analytics','Сайт трафигі мен конверсияны талдайды.')+R('Meta Ads Manager','Әлеуметтік желі жарнамасын басқарады.')+R('Mailchimp','Email-науқандарды құрады және статистика береді.')+R('Canva','Жарнамалық визуалдарды дайындайды.')},
+{id:'mt',t:'Тапсырма: арнаны таңда',h:`<p>Мақсатқа сай арнаны таңдаңыз:</p>${['Сайтқа ұзақ мерзімді тегін трафик','Бар клиенттермен қарым-қатынас','Нақты іздеу сұранысы бойынша жылдам нәтиже'].map(x=>`<p>${x}: <select class=mt><option value="">—</option><option value=SEO>SEO</option><option value=Email>Email</option><option value=Ctx>Контекстік жарнама</option><option value=SMM>SMM</option></select></p>`).join('')}<button class=b onclick=chk()>Тексеру</button><div class=fb id=mr role=status>Нәтиже осында шығады.</div>`},
+{id:'cs',t:'Шағын кейс',h:`<p>Кофехана ай сайын 100 000 ₸ жұмсап, 60 тапсырыс алады. Калькулятор бөліміне оралып, басу санын өсіргенде CR мен ROI қалай өзгеретінін салыстырыңыз.</p><button class=b onclick="go('ca')">Калькуляторға оралу</button>`},
+{id:'sm',t:'Қорытынды',h:`<p>Арна мақсатқа қарай таңдалады, ал нәтиже CTR, CR, CPA, ROI арқылы өлшенеді.</p><button class=b onclick=nx()>Тестке өту ▶</button>`},
+{id:'quiz',t:'Білімді тексеру',nx:'test'},
+{id:'test',t:'Тестілеу нәтижелері',h:`<table><tr><th>Тексеру</th><th>Нәтиже</th></tr><tr><td>Навигация, мәзір, артқа/келесі</td><td>✓</td></tr><tr><td>Калькулятор есептеулері</td><td>✓</td></tr><tr><td>Сәйкестендіру тапсырмасы</td><td>✓</td></tr><tr><td>Тест пен кері байланыс</td><td>✓</td></tr></table><p>Автоматты тексеру:</p><button class=b onclick="atest('ao')">Іске қосу</button><div class=fb id=ao role=status></div>`}],
+q:[{q:'Воронканың соңғы кезеңі?',o:['Хабардарлық','Қызығушылық','Әрекет (сатып алу)','Салыстыру'],a:2,e:'Соңғы кезең — мақсатты әрекет.'},
+{q:'CTR дегеніміз не?',o:['Басу саны мен көрсетілім қатынасы','Бюджет үлесі','Сайттың жылдамдығы','Пошта саны'],a:0,e:'CTR = басу / көрсетілім × 100%.'},
+{q:'Ұзақ мерзімді тегін органикалық трафикке қай арна бағытталған?',o:['Контекстік жарнама','SEO','Баннер','Тікелей хат'],a:1,e:'SEO органикалық трафик береді.'},
+{q:'ROI формуласы қайсысы?',o:['(Кіріс − шығын) / шығын × 100%','Басу / көрсетілім','Бюджет × чек','Тапсырыс / күн'],a:0,e:'ROI инвестиция қайтымдылығын көрсетеді.'},
+{q:'Email-маркетингтің басты артықшылығы?',o:['Бар базамен тікелей және арзан байланыс','Бәріне тегін жарнама','Іздеуде бірінші орын','Бейнені авто жасау'],a:0,e:'Email жеке хабарлама мен өлшеуге мүмкіндік береді.'}]},
+hard:{n:'Күрделі · Экологиялық мониторинг жүйесі',s:[
+{id:'t',t:'Экологиялық мониторинг жүйесі',h:`<p>Интерактивті мультимедиалық жоба · күрделі деңгей · 9-нұсқа</p><button class=b onclick=nx()>Бастау ▶</button>`},
+{id:'str',t:'Жобаның құрылымдық сызбасы',h:`<svg viewBox="0 0 320 150" role=img aria-label="Сенсор, шлюз, бұлт, талдау, дашборд"><g class=bx>${['Сенсор','Шлюз','Бұлт','Талдау','Дашборд'].map((x,i)=>`<rect class=bx x=${4+i*64} y=55 width=56 height=36 rx=6></rect><text x=${32+i*64} y=77 text-anchor=middle>${x}</text>`).join('')}</g>${[0,1,2,3].map(i=>`<line class=dash x1=${60+i*64} y1=73 x2=${68+i*64} y2=73></line>`).join('')}<text x=160 y=130 text-anchor=middle>Ауа · Су · Топырақ тармақтары</text></svg><p class=mu>Дерек сенсордан дашбордқа дейін осы тізбекпен өтеді.</p>`},
+{id:'gl',t:'Мақсат және нәтиже',h:`<p>Мақсат: ауа, су, топырақ мониторингінің интерактивті үлгісін зерттеу.</p><ul><li>Сенсорлық желі құрылымын түсіну;</li><li>аномалияға дұрыс шешім қабылдау;</li><li>деректерді визуализациялау.</li></ul>`},
+{id:'cpt',t:'Негізгі ұғым',h:R('Экологиялық мониторинг','Қоршаған орта жай-күйін жүйелі бақылау, бағалау және болжау.')+R('IoT-сенсор','Параметрді өлшеп, деректі желі арқылы жібереді.')+R('Аномалия','Қалыпты шектен тыс көрсеткіш.')},
+{id:'ch',t:'Нысанды таңдаңыз',nb:1,h:`<p>Тармақты таңдаңыз:</p><button class=b onclick="go('air')">Ауа</button> <button class=b onclick="go('water')">Су</button> <button class=b onclick="go('soil')">Топырақ</button>`},
+{id:'air',t:'Ауа мониторингі',nx:'sens',h:`<p>PM2.5 — диаметрі 2,5 мкм-ден аз ұсақ бөлшектер, олар өкпеге терең өтеді. Қосымша: PM10, CO₂, NO₂, температура.</p><button class=b onclick="go('ch')">Басқа нысан</button>`},
+{id:'water',t:'Су мониторингі',nx:'sens',h:`<p>Негізгі көрсеткіштер: pH, лайлылық, еріген оттегі, температура, өткізгіштік.</p><button class=b onclick="go('ch')">Басқа нысан</button>`},
+{id:'soil',t:'Топырақ мониторингі',nx:'sens',h:`<p>Негізгі көрсеткіштер: ылғалдылық, тұздылық, pH, ауыр металдар мөлшері.</p><button class=b onclick="go('ch')">Басқа нысан</button>`},
+{id:'sens',t:'Сенсорлық желі',h:`<p>Станциялар деректі шлюзге жібереді. Жеке сенсор қателесуі мүмкін, сондықтан көрші станциялармен салыстыру қажет.</p><svg viewBox="0 0 300 90" role=img aria-label="Анимацияланған сенсорлар"><circle class=nd cx=150 cy=45 r=14></circle>${[40,260].map(x=>`<circle class=nd cx=${x} cy=45 r=9></circle><line class=dash x1=${x} y1=45 x2=150 y2=45></line>`).join('')}</svg><p class=mu>Қозғалыс — деректердің ағынын білдіреді (анимацияны өшіру баптауына сәйкес тоқтайды).</p>`},
+{id:'sim',t:'Симулятор: ауа сапасы',init:'sim0',h:`<p>PM2.5, мкг/м³ (оқу мақсатындағы шартты шектер): <b id=sv>10</b></p><input type=range id=sr min=0 max=150 value=10 style="width:100%" aria-label="PM2.5" oninput=sim(+this.value)><div class=g><i id=sg></i></div><p>Күй: <span class="pill ok" id=so>Жақсы</span></p><label><input type=checkbox id=snd> Дыбыстық дабыл</label><p class=mu id=cap>Дабыл кезінде дыбыстың мәтіндік баламасы осында шығады.</p>`},
+{id:'scn',t:'Сценарий: шешім қабылдау',nb:1,h:`<p>Кәсіпорын маңындағы датчикте PM2.5 күрт өсті. Алғашқы әрекетіңіз?</p><button class=op onclick="go('bad')">Деректі елемеу</button><button class=op onclick="go('good')">Датчикті тексеру және көрші станциямен салыстыру</button><button class=op onclick="go('mid')">Бірден халыққа дабыл жариялау</button>`},
+{id:'bad',t:'Нәтиже: қате шешім',nx:'viz',h:`<p class=fb>✗ Нақты ластануды өткізіп алуыңыз мүмкін. Дұрыс жол — алдымен деректі тексеру.</p>`},
+{id:'mid',t:'Нәтиже: жартылай дұрыс',nx:'viz',h:`<p class=fb>⚠ Ақпараттандыру маңызды, бірақ тексеріссіз дабыл жалған дүрбелең тудыруы мүмкін.</p>`},
+{id:'good',t:'Нәтиже: дұрыс шешім',nx:'viz',h:`<p class=fb>✓ Деректі растап, содан кейін ден қою — сенімді жол.</p>`},
+{id:'viz',t:'Деректерді визуализациялау',init:'viz',h:`<svg viewBox="0 0 300 130" id=vs role=img aria-label="Жеті күндік PM2.5 диаграммасы"></svg><p id=vt class=mu></p><button class=b onclick=viz()>Жаңа деректер</button>`},
+{id:'acc',t:'Қолжетімділік',h:`<p>Іске асырылған шаралар: пернетақтамен басқару, дыбыстың мәтіндік баламасы, SVG сипаттамалары, анимацияны азайту баптауына қолдау.</p><button class=b onclick="document.body.classList.toggle('hc')">Жоғары контраст</button> <button class=b onclick="document.body.classList.toggle('lg')">Үлкен қаріп</button>`},
+{id:'quiz',t:'Білімді тексеру'},
+{id:'test',t:'Функционалдық тестілеу',h:`<p>Автотест слайд сілтемелерін, сұрақтарды және тақырыптарды тексереді.</p><button class=b onclick="atest('ao')">Іске қосу</button><div class=fb id=ao role=status></div>`},
+{id:'sm',t:'Қорытынды',h:`<p>Мониторинг жүйесі өлшеу, тасымалдау, талдау және визуализацияны біріктіреді. Шешімдер деректі тексеруге сүйенуі тиіс.</p>`}],
+q:[{q:'Экологиялық мониторинг дегеніміз не?',o:['Ортаның жай-күйін жүйелі бақылау және бағалау','Тек фото түсіру','Сайт жасау','Электр есептеу'],a:0,r:'cpt',e:'Мониторинг — жүйелі бақылау, бағалау, болжау.'},
+{q:'Деректер жолы қай жауапта дұрыс?',o:['Дашборд → сенсор','Сенсор → шлюз → бұлт → талдау → дашборд','Бұлт → сенсор','Талдау → шлюз'],a:1,r:'str',e:'Дерек сенсордан басталады.'},
+{q:'PM2.5 дегеніміз не?',o:['Диаметрі ≤ 2,5 мкм ұсақ бөлшектер','Дыбыс деңгейі','Су температурасы','Электр кернеуі'],a:0,r:'air',e:'PM2.5 — ұсақ бөлшектер.'},
+{q:'Су сапасына жататын көрсеткіш?',o:['pH және лайлылық','Экран ажыратымдылығы','Кадр жиілігі','Желі жылдамдығы'],a:0,r:'water',e:'pH, лайлылық, еріген оттегі — су көрсеткіштері.'},
+{q:'Топырақ мониторингінде қандай параметр өлшенеді?',o:['Ылғалдылық және тұздылық','Баннер өлшемі','CTR','Қаріп түрі'],a:0,r:'soil',e:'Ылғалдылық пен тұздылық негізгі параметрлер.'},
+{q:'Датчик көрсеткіші күрт өссе, алғашқы әрекет?',o:['Елемеу','Тексеру және көрші станциямен салыстыру','Датчикті лақтыру','Бәрін өшіру'],a:1,r:'scn',e:'Алдымен деректің дұрыстығын растау керек.'},
+{q:'Автоматты хабарлама не үшін қажет?',o:['Жедел ден қою үшін','Безендіру үшін','Деректі жою үшін','Жарнама үшін'],a:0,r:'sim',e:'Аномалияға тез реакция жасауға көмектеседі.'},
+{q:'Жеті күндік өзгерісті көрсетуге қолайлы диаграмма?',o:['Бағанды немесе сызықтық','Тек мәтін','Фото','Аудио'],a:0,r:'viz',e:'Уақыт қатарын бағанды не сызықтық диаграмма жақсы көрсетеді.'},
+{q:'Дыбыстық дабылға қосымша қандай балама керек?',o:['Мәтіндік немесе көрнекі балама','Ештеңе','Тек қатты дыбыс','Қара экран'],a:0,r:'acc',e:'Қолжетімділік үшін балама міндетті.'},
+{q:'Функционалдық тестілеу нені тексереді?',o:['Батырмалар мен өтулердің жұмысын','Тек түсті','Тек қаріпті','Файл атауын'],a:0,r:'test',e:'Ол функциялардың дұрыс жұмысын тексереді.'}]}
+};
+let L='easy',ST={},H=[],cur;
+const S=()=>C[L].s,Q=()=>C[L].q;
+function lvl(k){L=k;ST[k]=ST[k]||{cur:S()[0].id,H:[],i:0,sc:0,w:[],a:null};H=ST[k].H;cur=ST[k].cur;
+$('#lv').innerHTML=Object.keys(C).map(x=>`<button role=tab class="${x==k?'on':''}" onclick="lvl('${x}')">${C[x].n}</button>`).join('');
+draw()}
+function go(id){if(cur&&cur!=id)H.push(cur);cur=id;draw()}
+function back(){if(H.length){cur=H.pop();draw()}}
+function nx(){const s=S(),i=s.findIndex(x=>x.id==cur);const n=s[i].nx||(s[i+1]&&s[i+1].id);if(n)go(n)}
+function tg(f){document.body.classList.toggle('mo',f)}
+function menu(){const s=S(),v=ST[L].v=ST[L].v||{};v[cur]=1;$('#mn').innerHTML=s.map((x,i)=>{const d=v[x.id]&&x.id!=cur;return `<button class="mi${x.id==cur?' on':''}${d?' dn':''}${x.nx&&x.id!='quiz'?' sub':''}" onclick="go('${x.id}');tg(0)"><b>${d?'✓':i+1}</b>${x.t}</button>`}).join('');$('#ttl').textContent=C[L].n;$('#pc').textContent=(s.findIndex(x=>x.id==cur)+1)+' / '+s.length;const a=$('#mn .on');if(a&&a.scrollIntoView)a.scrollIntoView({block:'nearest'})}
+function draw(){const s=S(),i=s.findIndex(x=>x.id==cur),c=s[i];ST[L].cur=cur;
+$('#sl').innerHTML=`<h2>${c.t}</h2>`+(c.id=='quiz'?'<div id=qb></div>':c.h);if(c.id=='quiz')drawQ();
+menu();$('#pg').style.width=(i+1)/s.length*100+'%';$('#pv').disabled=!H.length;
+$('#nx').disabled=!!c.nb||(!c.nx&&i==s.length-1)||c.id=='quiz';
+if(c.init)window[c.init]();scrollTo(0,0)}
+function drawQ(){const q=Q(),st=ST[L],b=$('#qb');
+if(st.i>=q.length){const p=Math.round(st.sc/q.length*100);b.innerHTML=`<p class=fb role=status><b>Нәтиже: ${st.sc}/${q.length} (${p}%)</b><br>${p>=80?'🎉 Өте жақсы!':p>=60?'Жақсы, бірақ қайталаған артық.':'Материалды қайталаңыз.'}</p>${st.w.length?'<p>Қайталауға арналған бөлімдер:</p>'+[...new Set(st.w)].map(r=>`<button class=b onclick="go('${r}')">${S().find(x=>x.id==r).t}</button> `).join(''):''}<p><button class=b onclick="rs()">Қайта тапсыру</button> <button class=b onclick="nxq()">Әрі қарай ▶</button></p>`;return}
+const x=q[st.i];b.innerHTML=`<p class=mu>Сұрақ ${st.i+1}/${q.length}</p><h3>${x.q}</h3>`+x.o.map((o,k)=>`<button class=op onclick="ans(${k})">${o}</button>`).join('')+'<div id=fb role=status></div>'}
+function ans(k){const st=ST[L],x=Q()[st.i];if(st.a!==null)return;st.a=k;const ok=k==x.a;if(ok)st.sc++;else st.w.push(x.r||'g');
+document.querySelectorAll('.op').forEach((e,j)=>{e.classList.add(j==x.a?'ok':j==k?'er':'x');e.disabled=true});
+$('#fb').innerHTML=`<p class=fb>${ok?'✓ Дұрыс!':'✗ Қате.'} ${x.e}</p><button class=b onclick="nq()">${st.i+1<Q().length?'Келесі сұрақ ▶':'Нәтиже'}</button>`}
+function nq(){const st=ST[L];st.i++;st.a=null;drawQ()}
+function rs(){Object.assign(ST[L],{i:0,sc:0,w:[],a:null});drawQ()}
+function nxq(){const c=S().find(x=>x.id=='quiz');const s=S();const n=c.nx||s[s.findIndex(x=>x.id=='quiz')+1];if(n)go(n.id||n);else $('#qb').insertAdjacentHTML('beforeend','<p class=mu>Бұл соңғы бөлім.</p>')}
+function calc(){const g=i=>+$('#'+i).value||0,b=g('cb'),s=g('cs'),k=g('ck'),o=g('co'),p=g('cp'),inc=o*p;
+$('#cr').innerHTML=`CTR: <b>${s?(k/s*100).toFixed(2):0}%</b> · CR: <b>${k?(o/k*100).toFixed(2):0}%</b><br>CPA: <b>${o?Math.round(b/o):0} ₸</b> · ROI: <b>${b?((inc-b)/b*100).toFixed(1):0}%</b>`;
+const m=Math.max(b,inc,1);$('#b1').setAttribute('width',b/m*270);$('#b2').setAttribute('width',inc/m*270)}
+function chk(){const k=['SEO','Email','Ctx'];let ok=0;document.querySelectorAll('.mt').forEach((e,i)=>{const r=e.value==k[i];ok+=r;e.className='mt '+(r?'ok':'bad')});$('#mr').textContent=ok==3?'✓ Барлығы дұрыс!':`Дұрыс жауап: ${ok}/3. Қателерді түзетіңіз.`}
+let AC,lastBad=false;
+function beep(){try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();const o=AC.createOscillator(),g=AC.createGain();o.frequency.value=880;g.gain.value=.08;o.connect(g);g.connect(AC.destination);o.start();setTimeout(()=>o.stop(),300)}catch(e){}}
+function sim0(){lastBad=false;sim(10)}
+function sim(v){const [t,c]=v<12?['Жақсы','ok']:v<35?['Орташа','mid']:v<55?['Сезімтал топтарға қауіпті','warn']:['Қауіпті — дабыл!','bad'];
+$('#sv').textContent=v;const o=$('#so');o.textContent=t;o.className='pill '+c;$('#sg').style.width=Math.min(100,v/1.5)+'%';
+if(c=='bad'&&!lastBad){$('#cap').textContent='🔔 Дыбыс: қысқа жоғары тонды дабыл — шектен асты!';if($('#snd').checked)beep()}
+if(c!='bad')$('#cap').textContent='Дабыл жоқ.';lastBad=c=='bad'}
+function viz(){const d=[...Array(7)].map(()=>8+Math.round(Math.random()*60)),n=d.filter(x=>x>35).length;
+$('#vs').innerHTML=d.map((v,i)=>`<rect x=${15+i*40} y=${120-v*1.5} width=28 height=${v*1.5} fill="${v>35?'#ef4f5f':'#22b573'}"></rect><text x=${29+i*40} y=128 text-anchor=middle>${i+1}</text>`).join('')+'<line x1=5 x2=295 y1=67.5 y2=67.5 stroke-dasharray="4 3"></line>';
+$('#vt').textContent=`Мәндер (мкг/м³): ${d.join(', ')}. Шектен (35) асқан күн: ${n}. Үзік сызық — шек.`}
+function atest(id){const r=[];Object.keys(C).forEach(k=>{const s=C[k].s,ids=s.map(x=>x.id),txt=JSON.stringify(s);
+r.push([k+': id бірегей',new Set(ids).size==ids.length]);
+const t=[...txt.matchAll(/go\('(\w+)'\)/g)].map(m=>m[1]).concat(s.filter(x=>x.nx).map(x=>x.nx));r.push([k+': сілтемелер ('+t.length+') жарамды',t.every(x=>ids.includes(x))]);
+r.push([k+': барлық слайдтың тақырыбы бар',s.every(x=>x.t)]);
+r.push([k+': сұрақтар ('+C[k].q.length+') дұрыс құрылған',C[k].q.every(q=>q.a<q.o.length)])});
+$('#'+id).innerHTML=r.map(x=>`${x[1]?'✓':'✗'} ${x[0]}`).join('<br>')}
+lvl('easy');
+</script></body></html>
